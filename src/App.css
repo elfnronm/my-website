@@ -2,16 +2,7 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
 .App-header {
   background-color: #282c34;
@@ -28,11 +19,118 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+/* Tüm sayfa için genel stil */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #282c34; /* Koyu arka plan rengi */
+  color: white; /* Yazı rengi beyaz */
 }
+
+/* Ana konteyneri oluşturarak sağdan ve soldan boşluk ekler */
+.container {
+  max-width: calc(100% - 20cm); /* Sayfanın genişliğinden sağ ve sol toplamda 20 cm boşluk bırak */
+  margin: 0 auto; /* Ortaya hizalama */
+  padding: 0 10px; /* Kenarlardan ufak boşluk */
+  background-color: #282c34; /* Koyu arka plan rengi */
+}
+
+/* NavBar'ın stilini korur ve .container içinde hizalanmasını sağlar */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #61dafb; /* Link rengi */
+  font-size: 20px;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: #21a1f1; /* Link hover rengi */
+}
+
+/* Header ve diğer içeriklerin genel stilini belirler */
+.App-header {
+  padding: 20px;
+  text-align: center;
+  background-color: #282c34; /* Koyu arka plan rengi */
+}
+
+
+/* Login Formun Genel Stili */
+.login-container {
+  background-color: #3a3f47; /* Kutunun arka plan rengi */
+  padding: 20px; /* Kutunun içindeki öğeler için boşluk */
+  border-radius: 10px; /* Köşeleri yuvarlat */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hafif gölge efekti */
+  max-width: 300px; /* Maksimum genişlik */
+  margin: 50px auto; /* Ortaya hizalama */
+  text-align: center; /* Metni ortala */
+}
+
+/* Başlık Stili */
+.login-container h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+/* Form Öğeleri için Stil */
+.login-container input[type="text"],
+.login-container input[type="password"],
+.login-container input[type="email"] {
+  width: 100%; /* Genişlik kutunun tamamını kaplar */
+  padding: 10px; /* İçerik için boşluk */
+  margin: 10px 0; /* Üst ve alt boşluk */
+  border: none; /* Kenarlık yok */
+  border-radius: 5px; /* Köşeleri yuvarlat */
+  background-color: #1f2329; /* Input kutusunun arka plan rengi */
+  color: #61dafb; /* Yazı rengi */
+  box-sizing: border-box; /* Padding'i dahil ederek genişliği ayarlar */
+}
+
+/* Submit Butonu Stili */
+.login-container button[type="submit"] {
+  width: 100%; /* Butonun genişliği */
+  padding: 10px; /* İçerik için boşluk */
+  background-color: #21a1f1; /* Butonun arka plan rengi */
+  border: none; /* Kenarlık yok */
+  border-radius: 5px; /* Köşeleri yuvarlat */
+  color: white; /* Butonun yazı rengi */
+  font-size: 16px;
+  cursor: pointer; /* İmleç tipi */
+}
+
+/* Buton Hover Efekti */
+.login-container button[type="submit"]:hover {
+  background-color: #1d8dd6; /* Hover durumunda arka plan rengi */
+}
+
+/* "Don't have an account?" metni için stil */
+.login-container p {
+  font-size: 14px; /* Metni daha küçük yapmak için font boyutu */
+  color: #ccc; /* Renk */
+  margin-top: 20px; /* Üstten boşluk */
+}
+
+/* "Create an account" linki için stil */
+.login-container p a {
+  color: #61dafb; /* Link rengi */
+  text-decoration: none; /* Alt çizgiyi kaldır */
+}
+
+.login-container p a:hover {
+  text-decoration: underline; /* Hover durumu için alt çizgi */
+}
+
