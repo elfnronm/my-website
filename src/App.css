@@ -134,3 +134,89 @@ nav ul li a:hover {
   text-decoration: underline; /* Hover durumu için alt çizgi */
 }
 
+
+/*home page*/
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Sayfanın tam ortasında olmasını sağlar */
+  text-align: center;
+  padding-top: 0px; /* Yazıyı yukarı almak için padding ekliyoruz */
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.search-input {
+  padding: 20px; /* Genişliği artırdım */
+  font-size: 24px; /* Yazı boyutunu büyüttüm */
+  width: 600px; /* Arama kutusunun genişliğini büyüttüm */
+  border-radius: 10px; /* Kenarları daha yuvarlak yaptım */
+  border: 2px solid #ccc; /* Kenar kalınlığını artırdım */
+}
+
+.search-button {
+  padding: 20px 40px; /* Butonu büyüttüm */
+  font-size: 24px; /* Yazı boyutunu artırdım */
+  margin-left: 20px; /* Buton ile input arasındaki boşluğu büyüttüm */
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background-color: #45a049;
+}
+
+/*map*/
+
+.map-container {
+  width: 100%; /* Haritanın genişliğini sayfanın tamamına yay */
+  height: 500px; /* Sabit bir yükseklik */
+  margin: 0 auto; /* Ortalanmış */
+  position: relative;
+}
+
+.google-map {
+  width: 100%;
+  height: 100%;
+}
+
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  padding: 10px;
+  font-size: 18px;
+  width: 400px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.search-button {
+  padding: 10px 20px;
+  font-size: 18px;
+  margin-left: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background-color: #45a049;
+}
+
