@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-
 function Home() {
-  const [address, setAddress] = useState('');
+  const [origin, setOrigin] = useState('');
+  const [destination, setDestination] = useState('');
   const navigate = useNavigate();
 
   const handleSearch = (e) => {
     e.preventDefault();
-    if (address) {
-      // Adresi Map sayfasına yönlendir ve URL parametresi olarak gönder
-      navigate(`/map?address=${encodeURIComponent(address)}`);
+    if (origin && destination) {
+      // Adresleri Map sayfasına yönlendir ve URL parametreleri olarak gönder
+      navigate(`/map?origin=${encodeURIComponent(origin)}&destination=${encodeURIComponent(destination)}`);
     } else {
-      alert('Please enter an address');
+      alert('Please enter both the origin and destination');
     }
   };
 
@@ -22,9 +22,16 @@ function Home() {
       <form onSubmit={handleSearch} className="search-form">
         <input
           type="text"
-          value={address}
-          onChange={(e) => setAddress(e.target.value)}
-          placeholder="Where do you want to go?"
+          value={origin}
+          onChange={(e) => setOrigin(e.target.value)}
+          placeholder="Enter your current location"
+          className="search-input"
+        />
+        <input
+          type="text"
+          value={destination}
+          onChange={(e) => setDestination(e.target.value)}
+          placeholder="Enter your destination"
           className="search-input"
         />
         <button type="submit" className="search-button">Search</button>
